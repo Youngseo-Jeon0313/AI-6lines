@@ -18,7 +18,6 @@ class Node:
         return self.value_sum / self.visit_count
 
 
-    def expand_node():
+    def expand_node(): #확장시키는 노드
+        
 
-
-    def 
