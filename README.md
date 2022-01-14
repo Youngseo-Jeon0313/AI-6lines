@@ -40,7 +40,7 @@ MCTS.py 2목 버전을 함께 이해해보았다. 아무래도 강화학습/alph
 그리고 코드는 보고 또 보면 또 감이 느는 게 있으니까 그냥 드립다(?) 볼 생각이다.
 
 +js에 파이썬 알고리즘을 넣어야 하는데 그것조차도 그리 쉽지 않다ㅠㅠㅠ javascript에서 python코드를 호출하는 방법에 대해 또 공부를 해야 할 것 같다.
-
+http://daplus.net/javascript-javascript-%EC%BD%94%EB%93%9C%EC%97%90%EC%84%9C-python-%ED%95%A8%EC%88%98-%ED%98%B8%EC%B6%9C/
 
 
 
