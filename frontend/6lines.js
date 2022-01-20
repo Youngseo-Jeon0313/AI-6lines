@@ -34,6 +34,7 @@ window.onload = function(){
 //무르기 버튼을 누르면 다시 둘 수 있음
   btn2.addEventListener('mouseup', () =>{
     withdraw();
+
   });
 
   draw(); //시작하면서 빈 바둑판 그리기
@@ -67,11 +68,13 @@ window.onload = function(){
     ctx.fillStyle = '#e38d00';
     ctx.fillRect(0, 0, cw, ch); //cw = canvas weight
     for (let x=0; x< row; x++) {
+      for (let y=0; y< row; y++){
       let w=(cw-margin * 2) /row;
       ctx.strokeStyle = 'black';
       ctx.lineWidth = 1;
       ctx.strokeRect(w*x + margin, w*y + margin, w, w);
     }
+  }
     //4칸 당 하나씩 점 찍기
     for (let a =0 ; a < 3; a++) {
       for (let b=0; b<3; b++) {
@@ -108,7 +111,7 @@ drawCircle = (x,y)=> {
   drawRect(x, y);
   for (i=0; i<board.length; i++){
     let a = indexToXy(i)[0];
-    let b = indextoXy(i)[1];
+    let b = indexToXy(i)[1];
 
     if (board[xyToIndex(a,b)]==1){
       ctx.fillStyle = 'black';
@@ -224,7 +227,7 @@ withdraw = () => {
         whiteWinScreen.style.visibility = 'visible';
       }, 300);
       break;
-    }
+    }  
   }
   //마우스 클릭한 위치를 정확한 눈금 위치로 보정하기
   document.addEventListener('mouseup', (e)=> {
@@ -240,12 +243,13 @@ withdraw = () => {
       e.offsetY > 10 &&
       e.offsetY < 640
       ){
-        if (board[xyToIndex(x, y)] == 0)
+        if (board[xyToIndex(x, y)] == 0){
         //이미 돌이 놓여진 자리에는 못 놔 pass
-        count > 0 ? (board[xyToIndex(x,y)]=1) : (board[xyToIndex(x,y)] = -1)
+        count %2==0 ? (board[xyToIndex(x,y)]=1) : (board[xyToIndex(x,y)] = -1)
         count++; //이게 맞나 확인해야 됨 
         drawCircle(x,y);
       }
     }
-  })
-  }; 
+  }
+})
+  };

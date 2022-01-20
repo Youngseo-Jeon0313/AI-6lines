@@ -41,7 +41,7 @@ canvas {
 
 .buttons {
     grid-area: button;
-    height: 40px;
+    height: 30px;
     align-self: center;
     /* border : 2px solid purple; */
     display: grid;
@@ -67,7 +67,6 @@ canvas {
 }
 
 
-
 .winShow1{
     position: absolute;
     /* z-index: -1; */
@@ -84,12 +83,7 @@ canvas {
     font-size: 70px;
     font-weight: bolder;
 
-    animation-name: blink;
-    animation-timing-function: linear;
-    animation-duration: 2s;
-    animation-iteration-count: infinite;
 }
-
 .winShow2{
     position: absolute;
     /* z-index: -1; */
@@ -107,10 +101,6 @@ canvas {
     color: white;
     font-weight: bolder;
 
-    animation-name: blink;
-    animation-timing-function: linear;
-    animation-duration: 2s;
-    animation-iteration-count: infinite;
 }
 
 @keyframes blink{
@@ -121,8 +111,6 @@ canvas {
     80% {opacity: 0.6; }
     100% {opacity: 0.8;  }
 }
-
-
 @keyframes trophy {
     0% {width: 30px; height: 30px;}
     80% {width: 300px; height: 300px;}
